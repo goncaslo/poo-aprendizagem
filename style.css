@@ -1,0 +1,140 @@
+/* style.css — aparência do mini-curso POO */
+
+/* tipografia e fundo */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* header / menu */
+header {
+    background: linear-gradient(90deg, #2b85d8, #4fb0ff);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+header nav {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav h2 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.18s, transform 0.12s;
+}
+
+header nav a:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+}
+
+/* destaque da aba activa */
+header nav a.active {
+    background: rgba(0,0,0,0.12);
+    box-shadow: inset 0 -3px 0 rgba(255,255,255,0.06);
+}
+
+/* container principal */
+main {
+    max-width: 1000px;
+    margin: 28px auto;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(34, 34, 34, 0.04);
+}
+
+/* títulos */
+h1 {
+    color: #2b85d8;
+    margin-top: 0;
+}
+
+h2 {
+    color: #2b85d8;
+}
+
+/* listas de tópicos / resumos */
+.topics, .topics li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topics li {
+    background: #eef7ff;
+    margin: 8px 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+/* blocos de código */
+.code-box {
+    background: #1e1f1b;
+    color: #e6e7da;
+    padding: 14px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+    margin: 14px 0;
+    line-height: 1.45;
+    font-size: 13px;
+}
+
+/* output / resultado */
+.output {
+    background: #f3f7fb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.result {
+    background: #fff;
+    border: 1px solid #e6eef9;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+}
+
+/* footer */
+footer {
+    max-width: 1000px;
+    margin: 18px auto;
+    text-align: center;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+/* responsividade simples */
+@media (max-width: 720px) {
+    header nav { padding: 12px; flex-direction: column; gap: 12px; align-items: flex-start; }
+    header nav ul { flex-wrap: wrap; gap: 8px; }
+    main { margin: 14px; padding: 18px; }
+}
