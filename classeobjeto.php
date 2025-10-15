@@ -209,6 +209,12 @@ document.getElementById("runBtn").addEventListener("click", async () => {
 
     const result = await response.text();
     const iframe = document.getElementById("result");
-    iframe.srcdoc = "<body style='font-family: Arial; color:#003366; background:white; padding:10px;'>" + result + "</body>";
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDarkMode) {
+        iframe.srcdoc = "<body style='font-family: Arial; color:#ffffff; background:black; padding:10px;'>" + result + "</body>";
+    }
+    else {
+        iframe.srcdoc = "<body style='font-family: Arial; color:#003366; background:white; padding:10px;'>" + result + "</body>";
+    }
 });
 </script>
