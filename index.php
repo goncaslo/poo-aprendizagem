@@ -114,5 +114,6 @@ echo "O {$meuCarro->modelo} está a {$meuCarro->velocidade} km/h.";
     <p>Aprender POO em PHP — Projecto educativo</p>
 </footer>
 
+    <script src="darkmode.js"></script>
 </body>
 </html>

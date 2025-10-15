@@ -137,11 +137,12 @@ function initEditor(editorId, defaultCode) {
 
     document.getElementById("run-" + editorId).addEventListener("click", function() {
         const code = editor.getValue();
-        output.srcdoc = `<pre style='color:#0f0; font-size:15px; padding:10px;'>${code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
+        output.srcdoc = `<pre style='color: #00ff00; font-size:15px; padding:10px;'>${code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
     });
 }
 </script>
 
+    <script src="darkmode.js"></script>
 </body>
 </html>
 
@@ -169,7 +170,7 @@ function checkAnswer(question, correct) {
     const feedback = document.getElementById(`feedback${question}`);
     if (correct) {
         feedback.innerText = "✅ Correto!";
-        feedback.style.color = "green";
+        feedback.style.color = "#00ff00";
     } else {
         feedback.innerText = "❌ Errado, tenta outra vez!";
         feedback.style.color = "red";
