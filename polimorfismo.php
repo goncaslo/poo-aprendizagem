@@ -112,5 +112,110 @@ foreach ($formas as $f) {
     <p>POO — Polimorfismo</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+<script>
+function initEditor(editorId, defaultCode) {
+    const editor = ace.edit(editorId);
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/php");
+    editor.setValue(defaultCode.trim(), 1);
+
+    const output = document.getElementById("output-" + editorId);
+
+    document.getElementById("run-" + editorId).addEventListener("click", function() {
+        const code = editor.getValue();
+        output.srcdoc = `<pre style='color:#0f0; font-size:15px; padding:10px;'>${code.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>`;
+    });
+}
+</script>
+
 </body>
 </html>
+
+<div class="quiz">
+  <h2>Quiz — Polimorfismo</h2>
+
+  <p><b>1.</b> O que significa polimorfismo?</p>
+  <button onclick="checkAnswer(1, true)">Capacidade de um método ter várias formas</button>
+  <button onclick="checkAnswer(1, false)">Criar múltiplas classes</button>
+  <p id="feedback1" class="feedback"></p>
+
+  <p><b>2.</b> O polimorfismo permite que...</p>
+  <button onclick="checkAnswer(2, true)">Classes diferentes tenham métodos com o mesmo nome</button>
+  <button onclick="checkAnswer(2, false)">Uma classe tenha apenas um método</button>
+  <p id="feedback2" class="feedback"></p>
+
+  <p><b>3.</b> Qual é o benefício do polimorfismo?</p>
+  <button onclick="checkAnswer(3, true)">Facilita a reutilização e extensibilidade do código</button>
+  <button onclick="checkAnswer(3, false)">Elimina a herança</button>
+  <p id="feedback3" class="feedback"></p>
+</div>
+
+<script>
+function checkAnswer(question, correct) {
+    const feedback = document.getElementById(`feedback${question}`);
+    if (correct) {
+        feedback.innerText = "✅ Correto!";
+        feedback.style.color = "green";
+    } else {
+        feedback.innerText = "❌ Errado, tenta outra vez!";
+        feedback.style.color = "red";
+    }
+}
+</script>
+
+<div class="editor-box">
+  <h2>Experimenta: Polimorfismo em Ação</h2>
+  <div id="editor4">// Exemplo: classes com o mesmo método
+class Forma {
+    public function desenhar() {
+        echo "Desenhar uma forma";
+    }
+}
+
+class Circulo extends Forma {
+    public function desenhar() {
+        echo "Desenhar um círculo";
+    }
+}
+
+class Quadrado extends Forma {
+    public function desenhar() {
+        echo "Desenhar um quadrado";
+    }
+}
+
+$formas = [new Circulo(), new Quadrado()];
+foreach ($formas as $f) {
+    $f->desenhar();
+    echo "<br>";
+}
+</div>
+  <button class="run-btn" id="run-editor4">Executar</button>
+  <iframe id="output-editor4"></iframe>
+</div>
+
+<script>initEditor("editor4", document.getElementById("editor4").textContent);</script>
+
+<div class="editor-container">
+<h2>💻 Testa o teu código PHP</h2>
+    <textarea id="code" placeholder="Escreve aqui o teu código PHP..."></textarea>
+    <button id="runBtn">Executar</button>
+    <iframe id="result"></iframe>
+</div>
+
+<script>
+document.getElementById("runBtn").addEventListener("click", async () => {
+    const code = document.getElementById("code").value;
+
+    const response = await fetch("run.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "codigo=" + encodeURIComponent(code)
+    });
+
+    const result = await response.text();
+    const iframe = document.getElementById("result");
+    iframe.srcdoc = "<body style='font-family: Arial; color:#003366; background:white; padding:10px;'>" + result + "</body>";
+});
+</script>
