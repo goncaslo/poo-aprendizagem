@@ -2,521 +2,538 @@
 
 /* tipografia e fundo */
 :root {
-    --bg-color: #f5f7fa;
-    --text-color: #222;
-    --header-bg: linear-gradient(90deg, #2b85d8, #4fb0ff);
-    --header-text: white;
-    --card-bg: #ffffff;
-    --card-shadow: 0 10px 30px rgba(34, 34, 34, 0.04);
-    --topic-bg: #eef7ff;
-    --output-bg: #f3f7fb;
-    --code-bg: #1e1f1b;
-    --code-text: #e6e7da;
-    --border-color: #e6eef9;
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
-    --success-color: #00ff00;
+--bg-color: #f5f7fa;
+--text-color: #222;
+--header-bg: linear-gradient(90deg, #2b85d8, #4fb0ff);
+--header-text: white;
+--card-bg: #ffffff;
+--card-shadow: 0 10px 30px rgba(34, 34, 34, 0.04);
+--topic-bg: #eef7ff;
+--output-bg: #f3f7fb;
+--code-bg: #1e1f1b;
+--code-text: #e6e7da;
+--border-color: #e6eef9;
+--primary-color: #007bff;
+--primary-hover: #0056b3;
+--success-color: #00ff00;
 }
 
 /* Dark theme */
 [data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --header-bg: linear-gradient(90deg, #1a3a5c, #2b5278);
-    --card-bg: #2d2d2d;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --topic-bg: #2a3a4a;
-    --output-bg: #2a2f35;
-    --border-color: #3a3a3a;
-    --primary-color: #0d8bff;
-    --primary-hover: #0056b3;
-    --success-color: #00ff00;
+--bg-color: #1a1a1a;
+--text-color: #e0e0e0;
+--header-bg: linear-gradient(90deg, #1a3a5c, #2b5278);
+--card-bg: #2d2d2d;
+--card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+--topic-bg: #2a3a4a;
+--output-bg: #2a2f35;
+--border-color: #3a3a3a;
+--primary-color: #0d8bff;
+--primary-hover: #0056b3;
+--success-color: #00ff00;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+background: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 0;
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* header / menu */
 header {
-    background: var(--header-bg);
-    color: var(--header-text);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+background: var(--header-bg);
+color: var(--header-text);
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 header nav {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+max-width: 1050px;
+margin: 0 auto;
+padding: 14px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
 header nav h2 {
-    margin: 0;
-    font-size: 1.1rem;
+margin: 0;
+font-size: 1.1rem;
 }
 
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 14px;
-    margin: 0;
-    padding: 0;
+list-style: none;
+display: flex;
+gap: 14px;
+margin: 0;
+padding: 0;
 }
 
 header nav a {
-    color: var(--header-text);
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background 0.18s, transform 0.12s;
+color: var(--header-text);
+text-decoration: none;
+padding: 8px 12px;
+border-radius: 8px;
+font-weight: 600;
+transition: background 0.18s, transform 0.12s;
 }
 
 header nav a:hover {
-    background: rgba(255,255,255,0.12);
-    transform: translateY(-1px);
+background: rgba(255,255,255,0.12);
+transform: translateY(-1px);
 }
 
 /* destaque da aba activa */
 header nav a.active {
-    background: rgba(0,0,0,0.12);
-    box-shadow: inset 0 -3px 0 rgba(255,255,255,0.06);
+background: rgba(0,0,0,0.12);
+box-shadow: inset 0 -3px 0 rgba(255,255,255,0.06);
 }
 
 /* container principal */
 main {
-    max-width: 1000px;
-    margin: 28px auto;
-    background: var(--card-bg);
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
+max-width: 1000px;
+margin: 28px auto;
+background: var(--card-bg);
+padding: 28px;
+border-radius: 12px;
+box-shadow: var(--card-shadow);
 }
 
 /* títulos */
 h1 {
-    color: var(--text-color);
-    margin-top: 0;
+color: var(--text-color);
+margin-top: 0;
 }
 
 h2 {
-    color: var(--text-color);
+color: var(--text-color);
 }
 
 /* listas de tópicos / resumos */
 .topics, .topics li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+margin: 0;
+padding: 0;
+list-style: none;
 }
 
 .topics li {
-    background: var(--topic-bg);
-    margin: 8px 0;
-    padding: 10px 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-    color: var(--text-color);
+background: var(--topic-bg);
+margin: 8px 0;
+padding: 10px 12px;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+color: var(--text-color);
 }
 
 /* blocos de código */
 .code-box {
-    background: var(--code-bg);
-    color: var(--code-text);
-    padding: 14px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: "Courier New", Courier, monospace;
-    margin: 14px 0;
-    line-height: 1.45;
-    font-size: 13px;
+background: var(--code-bg);
+color: var(--code-text);
+padding: 14px;
+border-radius: 8px;
+overflow-x: auto;
+font-family: "Courier New", Courier, monospace;
+margin: 14px 0;
+line-height: 1.45;
+font-size: 13px;
 }
 
 /* output / resultado */
 .output {
-    background: var(--output-bg);
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 12px;
+background: var(--output-bg);
+padding: 12px;
+border-radius: 8px;
+margin-top: 12px;
 }
 
 .result {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 12px;
-    border-radius: 6px;
-    font-family: "Courier New", Courier, monospace;
-    white-space: pre-wrap;
-    color: var(--text-color);
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+padding: 12px;
+border-radius: 6px;
+font-family: "Courier New", Courier, monospace;
+white-space: pre-wrap;
+color: var(--text-color);
 }
 
 /* footer */
 footer {
-    max-width: 1000px;
-    margin: 18px auto;
-    text-align: center;
-    color: var(--text-color);
-    font-size: 14px;
+max-width: 1000px;
+margin: 18px auto;
+text-align: center;
+color: var(--text-color);
+font-size: 14px;
 }
 
 /* responsividade simples */
 @media (max-width: 720px) {
-    header nav { padding: 12px; flex-direction: column; gap: 12px; align-items: flex-start; }
-    header nav ul { flex-wrap: wrap; gap: 8px; }
-    main { margin: 14px; padding: 18px; }
+header nav { padding: 12px; flex-direction: column; gap: 12px; align-items: flex-start; }
+header nav ul { flex-wrap: wrap; gap: 8px; }
+main { margin: 14px; padding: 18px; }
 }
 
 /* quiz interativo */
 .quiz {
-    background: var(--output-bg);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 40px auto;
-    width: 80%;
-    max-width: 700px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+background: var(--output-bg);
+border-radius: 15px;
+padding: 30px;
+margin: 40px auto;
+width: 80%;
+max-width: 700px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+text-align: center;
 }
 
 .quiz h2 {
-    color: var(--text-color);
-    margin-bottom: 20px;
+color: var(--text-color);
+margin-bottom: 20px;
 }
 
 .quiz button {
-    margin: 8px;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 8px;
-    background: var(--primary-color);
-    color: white;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
+margin: 8px;
+padding: 10px 18px;
+border: none;
+border-radius: 8px;
+background: var(--primary-color);
+color: white;
+cursor: pointer;
+transition: background 0.2s ease-in-out;
 }
 
 .quiz button:hover {
-    background: var(--primary-hover);
+background: var(--primary-hover);
 }
 
 .quiz p {
-    font-size: 17px;
-    margin: 15px 0;
+font-size: 17px;
+margin: 15px 0;
 }
 
 .feedback {
-    font-weight: bold;
-    margin-top: 5px;
+font-weight: bold;
+margin-top: 5px;
 }
 
 /* === BLOCO DO EDITOR DE CÓDIGO === */
 .editor-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin: 50px auto;
-    width: 90%;
-    max-width: 800px;
-    background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 16px;
-    padding: 25px 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 15px;
+margin: 50px auto;
+width: 90%;
+max-width: 800px;
+background: var(--card-bg);
+border: 2px solid var(--border-color);
+border-radius: 16px;
+padding: 25px 30px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
 }
 
 .editor-container:hover {
-    box-shadow: 0 12px 30px rgba(13, 139, 255, 0.18);
-    transform: translateY(-3px);
+box-shadow: 0 12px 30px rgba(13, 139, 255, 0.18);
+transform: translateY(-3px);
 }
 
 .editor-container h2 {
-    color: var(--text-color);
-    font-size: 1.5em;
-    margin-bottom: 5px;
+color: var(--text-color);
+font-size: 1.5em;
+margin-bottom: 5px;
 }
 
 /* === TEXTAREA (onde o utilizador escreve código) === */
 #code {
-    width: 100%;
-    height: 220px;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    padding: 15px;
-    font-family: 'Courier New', monospace;
-    font-size: 15px;
-    background: var(--card-bg);
-    color: var(--text-color);
-    outline: none;
-    resize: vertical;
-    transition: all 0.3s ease;
+width: 100%;
+height: 220px;
+border: 2px solid var(--border-color);
+border-radius: 10px;
+padding: 15px;
+font-family: 'Courier New', monospace;
+font-size: 15px;
+background: var(--card-bg);
+color: var(--text-color);
+outline: none;
+resize: vertical;
+transition: all 0.3s ease;
 }
 
 #code:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+border-color: var(--primary-color);
+box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
 }
 
 /* === BOTÃO === */
 #runBtn {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+color: white;
+border: none;
+border-radius: 10px;
+padding: 12px 30px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+letter-spacing: 0.5px;
+transition: all 0.25s ease;
+box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 #runBtn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.45);
-    background: linear-gradient(135deg, #006ae6, #004c9c);
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(0, 123, 255, 0.45);
+background: linear-gradient(135deg, #006ae6, #004c9c);
 }
 
 /* === RESULTADO === */
 #iframe, #result {
-    width: 100%;
-    height: 200px;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    background: var(--card-bg);
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
-    margin-top: 5px;
-    padding: 0;
-    color: var(--text-color);
+width: 100%;
+height: 200px;
+border: 2px solid var(--border-color);
+border-radius: 10px;
+background: var(--card-bg);
+box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+margin-top: 5px;
+padding: 0;
+color: var(--text-color);
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 600px) {
-    .editor-container {
-        width: 95%;
-        padding: 20px;
-    }
+.editor-container {
+width: 95%;
+padding: 20px;
+}
 
-    #code {
-        height: 180px;
-        font-size: 14px;
-    }
+#code {
+height: 180px;
+font-size: 14px;
+}
 
-    #runBtn {
-        width: 100%;
-        padding: 10px;
-    }
+#runBtn {
+width: 100%;
+padding: 10px;
+}
 }
 
 /* === BLOCO DO EDITOR DE CÓDIGO (Centralização e Estrutura) === */
 .editor-box {
-    /* Centraliza o bloco na horizontal, define largura */
-    margin: 50px auto; 
-    width: 90%;
-    max-width: 800px; /* Garante que o bloco não seja demasiado largo */
-    
-    /* Para centralizar o conteúdo dentro do bloco (verticalmente no eixo principal, horizontalmente no eixo cruzado) */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza os elementos-filho (h2, div#code, button, iframe) horizontalmente */
-    justify-content: center;
-    
-    /* Estilo visual */
-    gap: 15px;
-    background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 16px;
-    padding: 25px 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* Centraliza o bloco na horizontal, define largura */
+margin: 50px auto; 
+width: 90%;
+max-width: 800px; /* Garante que o bloco não seja demasiado largo */
+
+/* Para centralizar o conteúdo dentro do bloco (verticalmente no eixo principal, horizontalmente no eixo cruzado) */
+display: flex;
+flex-direction: column;
+align-items: center; /* Centraliza os elementos-filho (h2, div#code, button, iframe) horizontalmente */
+justify-content: center;
+
+/* Estilo visual */
+gap: 15px;
+background: var(--card-bg);
+border: 2px solid var(--border-color);
+border-radius: 16px;
+padding: 25px 30px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
 }
 
 .editor-box:hover {
-    box-shadow: 0 12px 30px rgba(13, 139, 255, 0.18);
-    transform: translateY(-3px);
+box-shadow: 0 12px 30px rgba(13, 139, 255, 0.18);
+transform: translateY(-3px);
 }
 
 
 /* === BOTÃO === */
 /* Estilos aplicados ao id="runBtn" (antigo button#run-editor1) */
 .run-btn {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+color: white;
+border: none;
+border-radius: 10px;
+padding: 12px 30px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+letter-spacing: 0.5px;
+transition: all 0.25s ease;
+box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
 }
 
 .run-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.45);
-    background: linear-gradient(135deg, #006ae6, #004c9c);
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(0, 123, 255, 0.45);
+background: linear-gradient(135deg, #006ae6, #004c9c);
 }
 
 /* === RESULTADO === */
 /* Estilos aplicados ao id="iframe" (antigo iframe#output-editor1) */
 #iframe {
-    width: 100%;
-    height: 200px;
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    background: var(--card-bg);
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
-    margin-top: 5px;
-    padding: 0;
-    color: var(--text-color);
+width: 100%;
+height: 200px;
+border: 2px solid var(--border-color);
+border-radius: 10px;
+background: var(--card-bg);
+box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+margin-top: 5px;
+padding: 0;
+color: var(--text-color);
 }
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 600px) {
-    .editor-box {
-        width: 95%;
-        padding: 20px;
-    }
+.editor-box {
+width: 95%;
+padding: 20px;
+}
 
-    #code {
-        height: 180px;
-        font-size: 14px;
-    }
+#code {
+height: 180px;
+font-size: 14px;
+}
 
-    .run-btn {
-        width: 100%;
-        padding: 10px;
-    }
+.run-btn {
+width: 100%;
+padding: 10px;
+}
 }
 
 /* Altura do bloco de código do Ace Editor (Experiência) */
 #editor1 {
-    /* Manter 100% de largura */
-    width: 100%;
-    
-    /* Aumente o valor para a altura desejada. Por exemplo, 300px: */
-    height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
-    
-    /* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
+/* Manter 100% de largura */
+width: 100%;
+
+/* Aumente o valor para a altura desejada. Por exemplo, 300px: */
+height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
+
+/* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
 }
 
 #editor2 {
-    /* Manter 100% de largura */
-    width: 100%;
-    
-    /* Aumente o valor para a altura desejada. Por exemplo, 300px: */
-    height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
-    
-    /* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
+/* Manter 100% de largura */
+width: 100%;
+
+/* Aumente o valor para a altura desejada. Por exemplo, 300px: */
+height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
+
+/* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
 }
 
 #editor3 {
-    /* Manter 100% de largura */
-    width: 100%;
-    
-    /* Aumente o valor para a altura desejada. Por exemplo, 300px: */
-    height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
-    
-    /* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
+/* Manter 100% de largura */
+width: 100%;
+
+/* Aumente o valor para a altura desejada. Por exemplo, 300px: */
+height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
+
+/* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
 }
 
 #editor4 {
-    /* Manter 100% de largura */
-    width: 100%;
-    
-    /* Aumente o valor para a altura desejada. Por exemplo, 300px: */
-    height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
-    
-    /* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
+/* Manter 100% de largura */
+width: 100%;
+
+/* Aumente o valor para a altura desejada. Por exemplo, 300px: */
+height: 300px; /* Era 220px no seu outro bloco. 300px é um bom aumento. */
+
+/* ... e outras propriedades que o Ace Editor precisa (font-family, border, etc.) */
 }
 
 /* Dark mode toggle button */
 .theme-toggle {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-weight: 600;
+background: rgba(255, 255, 255, 0.1);
+border: none;
+color: white;
+padding: 8px 16px;
+border-radius: 20px;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 8px;
+transition: all 0.3s ease;
+font-weight: 600;
 }
 
 .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
+background: rgba(255, 255, 255, 0.2);
+transform: translateY(-1px);
 }
 
 .theme-toggle i {
-    font-size: 16px;
+font-size: 16px;
 }
 
 /* Hide the sun icon by default */
 .theme-toggle .sun {
-    display: none;
+display: none;
 }
 
 /* Show sun icon in dark mode */
 [data-theme="dark"] .theme-toggle .moon {
-    display: none;
+display: none;
 }
 
 [data-theme="dark"] .theme-toggle .sun {
-    display: inline;
+display: inline;
 }
 
 /* Dark mode styles for code editors */
 [data-theme="dark"] #code {
-    background: #1a1a1a;
-    color: #e0e0e0;
-    border-color: #3a3a3a;
+background: #1a1a1a;
+color: #e0e0e0;
+border-color: #3a3a3a;
 }
 
 [data-theme="dark"] #code:focus {
-    border-color: #5a5a5a;
-    box-shadow: 0 0 8px rgba(90, 90, 90, 0.3);
+border-color: #5a5a5a;
+box-shadow: 0 0 8px rgba(90, 90, 90, 0.3);
 }
 
 [data-theme="dark"] #result {
-    background: #1a1a1a;
-    color: #e0e0e0;
-    border-color: #3a3a3a;
+background: #1a1a1a;
+color: #e0e0e0;
+border-color: #3a3a3a;
 }
 
 [data-theme="dark"] .code-box {
-    background: #1a1a1a;
-    color: #e0e0e0;
+background: #1a1a1a;
+color: #e0e0e0;
 }
 
 [data-theme="dark"] .editor-container {
-    background: var(--card-bg);
-    border-color: var(--border-color);
+background: var(--card-bg);
+border-color: var(--border-color);
 }
 
 [data-theme="dark"] .editor-box {
-    background: var(--card-bg);
-    border-color: var(--border-color);
+background: var(--card-bg);
+border-color: var(--border-color);
 }
 
 [data-theme="dark"] .quiz h2 {
-    color: var(--text-color);
+color: var(--text-color);
 }
 
 [data-theme="dark"] .editor-container h2 {
-    color: var(--text-color);
+color: var(--text-color);
+}
+
+
+.theme-toggle i {
+  transition: transform 0.4s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg);
+}
+
+.theme-transition {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button:active {
+  transform: scale(0.97);
 }

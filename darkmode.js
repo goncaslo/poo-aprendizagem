@@ -62,4 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
             headerNav.prepend(themeToggle);
         }
     }
+
+   toggleTheme = () => {
+        const html = document.documentElement;
+        html.classList.add("theme-transition");
+        setTimeout(() => html.classList.remove("theme-transition"), 500);
+        
+        const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateThemeButton(theme);
+    };
+
+    
 });
+
+
